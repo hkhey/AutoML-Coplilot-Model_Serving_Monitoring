@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Prediction</title>
+</head>
+
+<body>
+    <h2>Model Prediction Form</h2>
+    <form id="prediction-form" action="/predict" method="post">
+        Temperature (C): <input name="Temperature_C" type="text" id="Temperature_C"><br>
+        Humidity: <input name="Humidity" type="text" id="Humidity"><br>
+        Wind Speed (kmph): <input name="Wind_speed_kmph" type="text" id="Wind_speed_kmph"><br>
+        Wind Bearing (degrees): <input name="Wind_bearing_degrees" type="text" id="Wind_bearing_degrees"><br>
+        Visibility (km): <input name="Visibility_km" type="text" id="Visibility_km"><br>
+        Pressure (millibars): <input name="Pressure_millibars" type="text" id="Pressure_millibars"><br>
+        Current Weather Condition: <input name="Current_weather_condition" type="text"
+            id="Current_weather_condition"><br>
+        <button type="submit">Predict</button>
+
+        <div id="prediction-result" style="margin-top: 20px; font-weight: bold; font-size: 20px; color: red;">
+            {{ prediction_result }}
+        </div>
+
+    </form>
+</body>
+
+</html>
